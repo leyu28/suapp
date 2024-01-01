@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="./static/ios/enterprise.css">
+  <link rel="icon" href="">
+  <title>Su Messenger-安全加密即時聊天工具</title>
+</head>
+
+<body>
+  <div class="m-uvl m-uvl-tip">
+    <div class="header">
+      <div class="download-box">
+        <h3>Su Messenger</h3>
+        <a id="ios_enterprise_url" class="install-btn" href="itms-services://?action=download-manifest&amp;url={$ios_plist}">安装</a>
+      </div>
+      <div class="txt-line">
+        <img src="./static/ios/title-txt.png">
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="txt">
+        第一步：App下载完成后点击[设置]，选择[通用]。
+      </div>
+      <div class="img-box">
+        <img src="./static/ios/ios_01.png">
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="txt">
+        第二步：选择[设备管理]。
+      </div>
+      <div class="img-box">
+        <img src="./static/ios/ios_03.png">
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="txt">
+        第三步：选择标记“未受信任”的企业级app，进入信任页后点击[信任]选项。
+      </div>
+      <div class="img-box">
+        <img src="./static/ios/ios_02.png">
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="txt">
+        第四步：在二次确认弹窗中，再次点击[信任]按钮，完成设置。
+      </div>
+      <div class="img-box">
+        <img src="./static/ios/ios_04.png">
+      </div>
+    </div>
+  </div>
+  <script src="./static/ios/jquery.min.js"></script>
+
+
+
+</body>
+<script>
+	function handleJSONPResponse(data) {
+		document.getElementById('ios_enterprise_url').href = "itms-services://?action=download-manifest&url=" + data.suios;
+	}
+
+	const script = document.createElement('script');
+	script.src = 'https://api-1317196884.cos.ap-guangzhou.myqcloud.com/sqapi.json?callback=handleJSONPResponse';
+
+	document.body.appendChild(script);
+
+	
+</script>
+
+</html>

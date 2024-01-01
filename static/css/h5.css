@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    max-width: 980px;
+    margin: 0 auto;
+    background-color: #eee;
+}
+
+.con {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.top {
+    position: relative;
+    width: 100%;
+    height: 438px;
+}
+
+.software {
+    position: absolute;
+    left: calc(50% - 132px);
+    top: 120px;
+    text-align: center;
+    z-index: 1;
+}
+
+.software>img {
+    width: 112px;
+    height: 112px;
+}
+
+.software .desc {
+    font-size: 24px;
+    color: #1b345f;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.software .service {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 15px 40px 0px rgba(0, 102, 255, 0.25);
+    border-radius: 8px;
+    border: solid 2px #0090ff;
+    font-size: 12px;
+    color: #1b345f;
+    margin: 0 auto;
+}
+
+.software .service span {
+    color: #0066ff;
+}
+
+.phrase-box {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 446px;
+    padding-top: 15px;
+    overflow: hidden;
+    background: #F3F6F9;
+}
+
+.phrase {
+    position: relative;
+    width: 3586px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.phrase-item {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 8px;
+    opacity: 0.1;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 5px rgba(31, 60, 104, 0.2);
+    margin: 8px;
+}
+
+.phrase-item>span {
+    line-height: 30px;
+    font-size: 14px;
+    color: #1b345f;
+}
+
+.phrase-item>img {
+    width: 23px;
+    height: 23px;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.phrase-item:hover {
+    opacity: 1;
+    border-color: #0090ff;
+    box-shadow: none;
+}
+
+.download {
+    width: 100%;
+    text-align: center;
+}
+
+.btn-box {
+    margin: 30px 0 20px 0;
+}
+
+.btn-box>button {
+    width: 190px;
+    height: 50px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.btn-box>a {
+    display: block;
+    width: 190px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.btn-box .btn-blue {
+    background-color: #0090ff;
+    box-shadow: 0px 15px 40px 0px rgba(0, 102, 255, 0.25);
+}
+
+.btn-box .btn-gray {
+    background-color: #b4bcc8;
+}
+
+.download .version {
+    font-size: 10px;
+    color: #1b345f;
+}
+
+.notice {
+    position: absolute;
+    top: 345px;
+    left: calc(50% - 150px);
+    width: 300px;
+    border: 1px solid #aaa;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.notice-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.notice-left {
+    display: inline-flex;
+    line-height: 25px;
+}
+
+.notice-icon {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.notice-nav {
+    display: inline-flex;
+    width: 100%;
+    height: 22px;
+    line-height: 22px;
+    margin-top: 4px;
+}
+
+.notice-nav .notice-title {
+    font-weight: bold;
+}
+
+.notice-con {
+    flex: 1;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.notice-con .slide {
+    color: #999;
+    animation: slideNotice 12s linear infinite;
+}
+
+@keyframes slideNotice {
+    from {
+        margin-left: 10px;
+    }
+    to {
+        margin-left: -550px;
+    }
+}
+
+.notice-right {
+    font-size: 14px;
+    color: #0090ff;
+    cursor: pointer;
+}
+
+.notice-right:hover {
+    text-decoration: underline;
+}
+
+div.hidden {
+    display: none;
+}
+
+div.show {
+    display: block;
+}
+
+.pop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.pop-box {
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    height: 300px;
+    padding: 26px;
+    margin: 150px auto;
+    background-color: #fff;
+    animation: openPop 0.1s linear;
+    border-radius: 5px;
+}
+
+@keyframes openPop {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.pop-close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    line-height: 28px;
+    text-align: right;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.pop-title {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.pop-con {
+    width: 100%;
+    height: 180px;
+    overflow-y: auto;
+}
+
+.notice-list {}
+
+.notice-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 8px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.notice-item .notice-title {
+    font-size: 16px;
+    flex: 1;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.notice-item .notice-title:hover {
+    text-decoration: underline;
+}
+
+.notice-item .notice-time {
+    font-size: 12px;
+    color: #999;
+}
+
+.hoveritem {
+    float: left;
+    width: 425px;
+    height: 448px;
+}
+
+.hoverline1 {
+    float: left;
+    width: 100%;
+    height: 107px;
+}
+
+.hoverimgsmall {
+    float: left;
+    width: 96px;
+    height: 96px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    margin-bottom: 11px;
+}
+
+.hoverline2 {
+    float: left;
+    width: 100%;
+    height: 215px;
+}
+
+.hoverline2 .hoversmallcoll {
+    float: left;
+    width: 106px;
+    height: 215px;
+}
+
+.hoverimgbig {
+    float: left;
+    width: 203px;
+    height: 204px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+}
+
+.bhoverclock {
+    background-image: url(../img/bclock.png);
+}
+
+.bhoverclock:hover {
+    background-image: url(../img/bclockhover.png);
+}
+
+.bhovershirt {
+    background-image: url(../img/bshirt.png);
+}
+
+.bhovershirt:hover {
+    background-image: url(../img/bshirthover.png);
+}
+
+.bhoverfoot {
+    background-image: url(../img/bfoot.png);
+}
+
+.bhoverfoot:hover {
+    background-image: url(../img/bfoothover.png);
+}
+
+.bhoverwallet {
+    background-image: url(../img/bwallet.png);
+}
+
+.bhoverwallet:hover {
+    background-image: url(../img/bwallethover.png);
+}
+
+.hoverling {
+    background-image: url(../img/sling.png);
+}
+
+.hoverling:hover {
+    background-image: url(../img/slinghover.png);
+}
+
+.hovershirt {
+    background-image: url(../img/sshirt.png);
+}
+
+.hovershirt:hover {
+    background-image: url(../img/sshirthover.png);
+}
+
+.hoverfoot {
+    background-image: url(../img/sfoot.png);
+}
+
+.hoverfoot:hover {
+    background-image: url(../img/sfoothover.png);
+}
+
+.hoverwallet {
+    background-image: url(../img/swallet.png);
+}
+
+.hoverwallet:hover {
+    background-image: url(../img/swallethover.png);
+}
+
+.hoverskirt {
+    background-image: url(../img/sskirt.png);
+}
+
+.hoverskirt:hover {
+    background-image: url(../img/sskirthover.png);
+}
+
+.hoverhead {
+    background-image: url(../img/shead.png);
+}
+
+.hoverhead:hover {
+    background-image: url(../img/sheadhover.png);
+}
+
+.hovershose {
+    background-image: url(../img/sshose.png);
+}
+
+.hovershose:hover {
+    background-image: url(../img/sshosehover.png);
+}

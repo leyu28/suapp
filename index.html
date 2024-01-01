@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <title>Su Messenger</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum=1.0,minimum=1.0,user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="./static/css/h5.css" />
+    <script type="text/javascript" src="./static/js/jquery.js"></script>
+    <script type="text/javascript" src="./static/js/jquery.cookie.js"></script>
+    <style type="text/css">
+        .download {
+            position: absolute;
+            top: 420px;
+            left: 0;
+            z-index: 2 !important;
+        }
+
+        .ios #download,
+        .aos #download,
+        #download_ios,
+        #download_aos {
+            display: none;
+        }
+
+        .ios #download_ios {
+            display: inline-block;
+        }
+
+        .aos #download_aos {
+            display: inline-block;
+        }
+		.ios #download_web {
+            display: inline-block;
+        }
+		.aos #download_web {
+            display: inline-block;
+        }
+        a,
+        a:hover,
+        a:focus,
+        a:active {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .pop-con-detail {
+            font-size: 14px;
+            line-height: 28px;
+            text-indent: 2em;
+            height: auto;
+            overflow: auto;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            width: 0px;
+        }
+
+        .bottom-time {
+            margin-top: 26px;
+            width: 100%;
+            margin-right: 6px;
+            font-size: 14px;
+            text-align: right;
+            line-height: 14px;
+            color: #666;
+        }
+
+        .notice-item .notice-title {
+            width: 100%;
+        }
+
+        .popbox {
+            height: 100%;
+            width: 100%;
+        }
+
+        .popTimecontent {
+            width: 100%;
+            height: calc( 100% - 80px);
+            overflow: auto;
+        }
+
+        .popTimeinerr {
+            width: 100%;
+            float: left;
+        }
+
+        .copy-right {
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .a_link {
+            display: block;
+            text-decoration: none;
+            color: #0090ff;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <div class="top">
+            <div class="phrase-box" id="phraseBox">
+                <!-- 短语  -->
+            </div>
+            <div class="software">
+                <img src="./static/img/su.png" />
+                <div class="desc">Su · 自在安心地畅所欲言</div>
+                <div class="service">Su · 商务合作账号: <span>10000</span></div>
+            </div>
+        </div>
+        <div class="download">
+            <div class="btn-box">
+                <button class="btn-blue" id="download">下载 Su Messenger</button>
+                <a class="btn-blue" id="download_ios" href="{$ios_url1}" target="_parent">企业版下载</a>
+                
+                <a id="download_aos" class="btn-blue" href='{$android_url}' download>安卓下载</a>
+				
+				<br><br><a class="btn-blue" id="download_web" href="{$web_url}" >网页版本</a>
+            </div>
+            <div class="version">当前版本 1.0.0</div>
+            <a  target="_blank" style="width: 100%;display: block;color: #1b345f;font-size: 12px;margin-top: 20px;">黔ICP备2023040214号</a>
+        </div>
+    </div>
+
+    <!-- 公告列表 -->
+    <div id="notice_list" class="pop hidden">
+        <div class="pop-box">
+            <div id="list_close" class="pop-close">×</div>
+            <div class="pop-title">
+                <B>公告中心</B>
+            </div>
+            <div class="pop-con">
+                <div class="notice-list">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 公告详情 -->
+    <div id="notice_detail" class="pop hidden">
+        <div class="pop-box">
+            <div id="detail_close" class="pop-close">×</div>
+            <div class="popbox">
+                <div class="pop-title popTitle">
+                    <B></B>
+                    <br/>
+                    <span class="bottom-time">2023-04-13 03:54:30</span>
+                </div>
+                <div class="popTimecontent">
+                    <div class="popTimeinerr">
+                        <div class="pop-con pop-con-detail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript" src="./static/js/notice.js"></script>
+<script type="text/javascript">
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+        document.body.className = 'ios';
+    } else {
+        document.body.className = 'aos';
+    }
+</script>
+<script>
+	function handleJSONPResponse(data) {
+		document.getElementById('download_ios').href = './enterprise.html';
+		document.getElementById('download_aos').href = data.suios;
+		document.getElementById('download_web').href = data.suweb;
+	}
+
+	const script = document.createElement('script');
+	script.src = 'https://api-1317196884.cos.ap-guangzhou.myqcloud.com/sqapi.json?callback=handleJSONPResponse';
+
+	document.body.appendChild(script);
+
+	
+</script>
+<script>
+    $(function() {
+        init()
+    })
+    var bigClassArr = ['bhoverclock', 'bhovershirt', 'bhoverfoot', 'bhoverwallet']
+    var classArr = ['hoverling', 'hovershirt', 'hoverfoot', 'hoverwallet', 'hoverskirt', 'hoverhead', 'hovershose'];
+    var smallArr = [
+        [2, 3, 4, 5, 1, 0, 3, 5, 5, 0, 1, 2],
+        [5, 1, 2, 3, 4, 0, 0, 5, 6, 4, 5, 0],
+        [3, 4, 5, 0, 0, 5, 6, 0, 0, 1, 2, 6],
+        [2, 3, 4, 0, 4, 1, 1, 0, 5, 0, 1, 2]
+    ]
+    $(function() {
+        init()
+    })
+
+    function init() {
+        var html = '';
+        for (var i = 0; i < 8; i++) {
+            let middle = i;
+            if (middle > 3) {
+                middle = middle - 4;
+            }
+            let smallImg = smallArr[middle];
+            var singleHtml = `<div class="hoveritem">
+			   <div class="hoverline1">
+					<div class="hoverimgsmall ${classArr[smallImg[0]]}"></div>
+					<div class="hoverimgsmall ${classArr[smallImg[1]]}"></div>
+					<div class="hoverimgsmall ${classArr[smallImg[2]]}"></div>
+					<div class="hoverimgsmall ${classArr[smallImg[3]]}"></div>
+				</div>
+				<div class="hoverline2">
+					<div class="hoversmallcoll">
+						<div class="hoverimgsmall ${classArr[smallImg[4]]}"></div>
+						<div class="hoverimgsmall ${classArr[smallImg[5]]}"></div>
+					</div>
+					<div class="hoverimgbig ${classArr[middle]}"></div>
+					<div class="hoversmallcoll">
+						<div class="hoverimgsmall ${classArr[smallImg[6]]}"></div>
+						<div class="hoverimgsmall ${classArr[smallImg[7]]}"></div>
+					</div>
+				</div>
+				<div class="hoverline1">
+					<div class="hoverimgsmall ${classArr[smallImg[8]]}"></div>
+					<div class="hoverimgsmall ${classArr[smallImg[9]]}"></div>
+					<div class="hoverimgsmall ${classArr[smallImg[10]]}"></div>
+					<div class="hoverimgsmall ${classArr[smallImg[11]]}"></div>
+				</div>
+			</div>`;
+            html += singleHtml;
+        }
+        var phrase_id = 'phrase_' + new Date().getTime();
+        var boxHtml = `<div id="${phrase_id}" class="phrase">${html}</div>`;
+        $('#phraseBox').html(boxHtml);
+        $("#" + phrase_id).animate({
+            right: 850 + 'px'
+        }, 30000, 'linear', function() {
+            $('#' + phrase_id).remove();
+            init();
+        })
+    }
+</script>
+
+</html>

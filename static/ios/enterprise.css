@@ -1,0 +1,287 @@
+.flex-1,
+.flex-10,
+.flex-11,
+.flex-12,
+.flex-2,
+.flex-3,
+.flex-4,
+.flex-5,
+.flex-6,
+.flex-8,
+.flex-9,
+.header .inner .logo {
+  float: left;
+}
+
+.bounceIn,
+.bounceInUp {
+  -webkit-animation-duration: 0.75s;
+}
+
+.footer .inner:after,
+.header .inner:after,
+.main-wrapper .Index-inner:after,
+.row:after {
+  clear: both;
+  content: "";
+  visibility: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+blockquote,
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+
+code,
+kbd,
+pre,
+samp {
+  /* font-family: couriernew, courier, monospace;  */
+}
+
+small {
+  font-size: 12px;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+legend {
+  color: #000;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+a:hover {
+  -webkit-tap-highlight-color: transparent;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 15.625vw;
+  }
+}
+
+body {
+  background: #eaf2fd;
+}
+
+.row {
+  zoom: 1;
+}
+
+.row:after {
+  display: block;
+  height: 0;
+}
+
+.flex-1 {
+  width: 8.33333%;
+}
+
+.flex-2 {
+  width: 16.66667%;
+}
+
+.flex-3 {
+  width: 25%;
+}
+
+.flex-4 {
+  width: 33.33333%;
+}
+
+.flex-5 {
+  width: 41.66667%;
+}
+
+.flex-6 {
+  width: 50%;
+}
+
+.flex-7 {
+  float: left;
+  width: 58.33333%;
+}
+
+.flex-8 {
+  width: 66.66667%;
+}
+
+.flex-9 {
+  width: 75%;
+}
+
+.flex-10 {
+  width: 83.33333%;
+}
+
+.flex-11 {
+  width: 91.66667%;
+}
+
+.flex-12 {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  padding: .5rem .3rem 0;
+}
+
+.header .download-box {
+  height: 1.9rem;
+  background: url("../img/su.png") no-repeat;
+  background-size: 1.5rem auto;
+  background-position: .15rem top;
+  padding: .15rem 0 0 2rem;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.header .download-box h3 {
+  font-size: .4rem;
+  color: #000;
+  white-space: nowrap;
+}
+
+.header .download-box .install-btn {
+  width: 1.2rem;
+  height: .4rem;
+  display: block;
+  background-color: #3678f2;
+  border-radius: .2rem;
+  font-size: .26rem;
+  text-align: center;
+  color: #fff;
+  line-height: .4rem;
+  text-decoration: none;
+  margin-top: .16rem;
+}
+
+.header .txt-line {
+  padding: .6rem .6rem 0;
+  line-height: 0;
+}
+
+.header .txt-line img {
+  width: 100%;
+}
+
+.step-item {
+  padding: .8rem .3rem 0;
+}
+
+.step-item .txt {
+  font-size: .24rem;
+  color: #333;
+  font-weight: bold;
+  font-family: PingFangSC-Medium;
+  text-align: justify;
+}
+
+.vi .step-item .txt {
+  font-family: "Times new roman";
+}
+
+.step-item .img-box {
+  line-height: 0;
+  margin-top: .2rem;
+}
+
+.step-item img {
+  width: 100%;
+}
+
+.slip-title {
+  background-image: url("./static/img/newimg/logo.png");
+  background-repeat: no-repeat;
+  margin-top: .8rem;
+  padding: 0 .3rem;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+  height: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  font-size: .36rem;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+body.vi {
+  font-family: "Times new roman";
+}
